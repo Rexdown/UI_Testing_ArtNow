@@ -41,7 +41,7 @@ def pytest_runtest_makereport(item, call):
 @allure.story('story')
 @allure.testcase('Проверка наличия картины "Трамвайный путь" в "Вышитые картины" с жанром "Городской пейзаж"')
 @make_test
-def test_click_extra_menu_items_1(browser):
+def test_1(browser):
     artnow_page = VishitiePageObject(browser)
     try:
         artnow_page \
@@ -59,10 +59,10 @@ def test_click_extra_menu_items_1(browser):
         raise
     
 
-@allure.title('Трамвайный путь №1')
+@allure.title('Трамвайный путь №2')
 @allure.testcase('Проверка, что стиль картины "Трамвайный путь" соответствует жанру "Реализм"')
 @make_test
-def test_click_extra_menu_items2(browser):
+def test_2(browser):
     artnow_page = TramvayWayStylePageObject(browser)
     try:
         artnow_page \
@@ -83,7 +83,7 @@ def test_click_extra_menu_items2(browser):
 @allure.title('Добавление в избранное')
 @allure.testcase('ПРоверка, что при добавлении картины в избранное из "Батик", она появляется в соответсвующем разделе')
 @make_test
-def test_click_extra_menu_items3(browser):
+def test_3(browser):
     artnow_page = BaticFirstLikedPageObject(browser)
     try:
         artnow_page \
@@ -105,7 +105,7 @@ def test_click_extra_menu_items3(browser):
 @allure.title('Работа поисковика')
 @allure.testcase('Проверка, что при поиске картин по тесту "Жираф", у первой картины в названии будет содердаться это слово')
 @make_test
-def test_click_extra_menu_items4(browser):
+def test_4(browser):
     artnow_page = SearchGirafPageObject(browser)
     try:
         artnow_page \
@@ -119,7 +119,7 @@ def test_click_extra_menu_items4(browser):
 @allure.title('Работа карзины')
 @allure.testcase('Проверка, что при добавлении картины из "Ювелирное искусство" в корзину, она появляется в соответсвующем разделе без изменения цены')
 @make_test
-def test_click_extra_menu_items5(browser):
+def test_5(browser):
     artnow_page = PutJewelryPaintingToCartPageObject(browser)
     try:
         artnow_page \
